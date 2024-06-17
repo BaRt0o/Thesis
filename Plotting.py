@@ -55,7 +55,7 @@ def plot_data(df, forecast_results, forecast_key, variable, plot_type, ax, add_f
 
     if add_forecast_start_line:
         ax.axvline(x=max_year + 0.5, color='black', linestyle='--', linewidth=1, label='Forecast Start')
-        ax.axvline(x=max_year + 30.5, color='grey', linestyle='--', linewidth=1, label='Cop28 Agreement')
+        ax.axvline(x=max_year + 30.5, color='red', linestyle='--', linewidth=1, label='Cop28 Agreement')
     ax.set_title(f'{variable} Production ({plot_type})', fontsize=16, fontweight='bold')
     ax.set_ylabel('Production (TWh)', fontsize=14)
     ax.set_xlabel('Year', fontsize=14)
@@ -111,7 +111,7 @@ def plot_data_stacked_bar(df, forecast_results, forecast_keys, variable, plot_ty
         bottom += combined_data[country]
 
     ax.axvline(x=2022.5, color='black', linestyle='--', linewidth=1, label='Forecast Start')
-    ax.axvline(x=2050.5, color='grey', linestyle='--', linewidth=1, label='Cop28 Agreement')
+    ax.axvline(x=2050.5, color='red', linestyle='--', linewidth=1, label='Cop28 Agreement')
     ax.set_title(f'{variable} Production ({plot_type})', fontsize=16, fontweight='bold')
     ax.set_ylabel('Production (TWh)', fontsize=14)
     ax.set_xlabel('Year', fontsize=14)
